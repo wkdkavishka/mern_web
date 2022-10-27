@@ -56,8 +56,8 @@ const NoteView = ({note}) => { // {notes} // deconstruct
                 //value={note.content}
                 defaultValue={content}
             />
-            
-            <span onClick={update_note}>Update</span>
+            <button onClick={delete_note}>Delete</button>
+            <button onClick={update_note}>Update</button>
         </div>
     )
 }
