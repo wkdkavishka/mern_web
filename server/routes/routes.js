@@ -1,6 +1,6 @@
 // requirements
 const express = require("express") // require express
-const model_note = require("../models/note")
+//const model_note = require("../models/note")
 const {
     add_note, get_note_all, get_note_one, update_note, delete_note
 } = require("../route_control/controls")

@@ -2,7 +2,8 @@
 import { useEffect, useState } from "react"
 
 // components
-import NoteView from "../components/notte_view";
+import NoteView from "../components/note_view";
+import NoteNew from "../components/note_new";
 
 
 const Home = () => {
@@ -17,9 +18,9 @@ const Home = () => {
             }
             return response.json();
           })
-          .then((actualData) => {
-            console.log("data --> ", actualData)
-            setnotes(actualData) // transport data
+          .then((data) => { 
+            console.log("data --> ", data) // just for testing  #############################
+            setnotes(data) // transport data
           })
           .catch((error) => {
             console.log("error --> ",error.message);
@@ -28,15 +29,14 @@ const Home = () => {
     []);
     
     return(
-        <div className="Home">
-            <div className="notes">
-                {notes && notes.map((note) => (
-                            <NoteView key={note._id} note={note}/>
-                        )
-                    )
-                }                
-            </div>
-        </div>
+      <div className="Home">
+          <div className="notes">
+              {notes && notes.map((note) => (
+                <NoteView key={note._id} note={note}/>
+              ))}                
+          </div>
+          <NoteNew/>
+      </div>
     )
 
 }

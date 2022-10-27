@@ -6,7 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css"
 
 const MyNavbar = () => {
     return(
-        <Navbar bg="light" expand="lg">
+        <Navbar bg="dark" variant="dark" expand="lg">
             <Container>
                 <Navbar.Brand href="/">Notes</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
